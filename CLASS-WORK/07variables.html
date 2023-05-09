@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    Variable/Identifier:used to store values
+    ==> 3 ways to declare 
+    1. var (global)(default)
+    2. let 
+    3. const
+
+    var varibleName = value;
+    let varibleName = value;
+    const varibleName = value;'
+    
+    var x = 12;
+    let y = "34";
+    const z = true;
+
+    document.write(varname);
+
+    document.write(x);//12
+
+    Rules:
+    1. varname can not start with a number 
+    var x1 =12;(right)
+    var 1x =90;(wrong)
+    var x 1 =34;(wrong)
+    var v-1 =89;(wrong)
+    var _v1 =7; (right)
+
+    2. var name cant be keywords
+
+    for()
+    {
+
+    }
+
+    var for =23;(for is keyword)
+    var for1 =45;(right) -->
+
+
+    <script>
+  //  x=1;// Assignment
+
+        var x=1; // declaration
+        var x=-12;// Re-declaration  ALLOWED
+        x=23.45;// Re-assignment ALLOWED
+
+        document.write(x);//23.45
+
+
+
+        
+        let y=1; // declaration
+       // let y=-12;// Re-declaration NOT ALLOWED
+        y=2.5;// Re-assignment ALLOWED
+
+        document.write(y);//23.45
+
+
+        
+        const z=1; // declaration
+       // const x=-12;// Re-declaration NOT  ALLOWED
+       // x=23.45;// Re-assignment NOT ALLOWED
+
+        document.write(z);//1
+
+        t =12;
+        var t=34;
+        t=9;
+        document.write(t);
+
+
+    </script>
+
+
+</body>
+</html>
