@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h1">
+
+    </h1>
+    <script>
+        var a = prompt("Enter A :");
+        var b = prompt("Enter B :");
+        var c = prompt("Enter C :");
+        var d = prompt("Enter D :");
+        t1=( a>b ? a : b);
+        t2=( c>d ? c : d);
+        large=(t1>t2 ? t1 : t2);
+        console.log(large);
+        document.getElementById('h1').innerHTML=large;
+        document.getElementById('h1').style.fontSize="73px";
+        document.getElementById('h1').style.color="blue";
+        document.getElementById('h1').style.background="yellow";
+        document.getElementById('h1').style.display="inline-block";
+
+    </script>
+</body>
+</html>
