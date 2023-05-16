@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            width: 400px;
+            height: auto;
+            font-weight: bold;
+            border: 1px solid black;
+            margin: 153px auto;
+            /* background-color: blue; */
+        }
+        h1{
+          text-align: center;
+          /* color: white; */
+          font-family: sans-serif;
+        }
+        input{
+            /* background-color: yellow; */
+            /* color: green; */
+            font-weight: bold;
+            /* border: none;
+            outline: none; */
+        }
+        input[type="text"],input[type="text"]{
+            margin: 23px auto;
+            display: block;
+            height: 44px;   
+           font-size: 22px;
+        }
+        select{
+            height: 44px;
+            font-size: 22px;
+            margin: 23px auto;
+            /* background-color: black; */
+            display: block;
+            /* color: white; */
+        }
+        button{
+            height: 44px;
+            font-size: 22px;
+            margin-left: 93px;
+            cursor: pointer;
+        }
+        .b2{
+            margin-left: 12px;
+        }
+        select{
+            width: 123px;
+             /* background: black; */
+              /* color: white; */
+            font-size: 33px;
+        }
+      
+        p{
+            font-size: 22px;
+            display: block;
+            /* color: white; */
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1>Calculator</h1>
+        <input type="text" name="" id="first">
+           <select name="" id="choice">
+            <option hidden> Select Operator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="/">%</option>
+           </select>
+        <input type="text" name="" id="second">
+        <button onclick="calc()">Calculate</button>
+        <button onclick="reset()" class="b2">Reset</button>
+        <p>Answer :-</p>
+      <input type="text" name="" id="result" readonly>
+    </div>  
+    <script>
+        function calc()
+        {
+       var op1= document.getElementById('first').value;
+       var op2= document.getElementById('second').value;
+       var choice= document.getElementById('choice').value;
+         if (choice == '+')
+         {
+            var res = Number(op1) + Number(op2);
+            document.getElementById('result').value=res;
+         }
+         if (choice == '-')
+         {
+            var res = Number(op1) - Number(op2);
+            document.getElementById('result').value=res;
+         }
+         if (choice == '*')
+         {
+            var res = Number(op1) * Number(op2);
+            document.getElementById('result').value=res;
+         }
+         if (choice == '/')
+         {
+            var res = Number(op1) / Number(op2);
+            document.getElementById('result').value=res;
+         }
+         if (choice == '%')
+         {
+            var res = Number(op1) % Number(op2);
+            document.getElementById('result').value=res;
+         }
+        }
+        function reset()
+        {
+         var reset1="";
+         document.getElementById('first').value=reset1;
+         document.getElementById('second').value=reset1;
+         document.getElementById('choice').value=reset1;
+         document.getElementById('result').value=reset1;
+
+        }
+    </script>
+</body>
+</html>

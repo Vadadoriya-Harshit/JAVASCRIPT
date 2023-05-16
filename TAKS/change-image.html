@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Q, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 900px;
+            display: flex;
+            border: 1px solid blue;
+           margin-left: 223px;
+        }
+        .img{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 12px;
+        }
+        .btn-1,.btn-2,.btn-3,.btn-4,.btn-5{
+            width: 200px;
+            font-size: 22px;
+            cursor: pointer;
+            height: 40px;
+            border: 1px solid gray;
+            border-radius: 33px;
+            margin-left: 12px;
+        }
+        .btn-2,.btn-3,.btn-4,.btn-5{
+            margin-left: 1px;
+        }
+        #i3{
+          display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="img">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfGFcSysjY3KVALv4phMDBYm7Hzil5oOvDlkw-J2Pi4w&usqp=CAU&ec=48665698" alt="" width="100%" height="100%" id="i1">
+    </div>
+    <div class="img">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYuA6_Se5j7_q-2zW4NIOzjGJMewoK2vz5m0oSFci_AA&usqp=CAU&ec=48665698" alt="" width="100%" height="100%" id="i2">
+    </div>
+    <div class="img">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVGHL9r9OucwArH8yO3rEDPryG4V3tSCBw-w&usqp=CAU"; alt="" id="i3" width="100%" height="100%">
+          </div>
+          <div class="img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYuA6_Se5j7_q-2zW4NIOzjGJMewoK2vz5m0oSFci_AA&usqp=CAU&ec=48665698" alt="" id="i4" width="100%" height="100%">
+         </div>
+    
+    </div>
+    <br><br>
+    <button class="btn-1" onclick="hide()">Hide Imagee</button>
+    <button class="btn-2" onclick="show()">Show Imagee</button>
+     <button class="btn-3"onclick="Change()">
+     Change Imagee
+     </button>
+     <button class="btn-4"onclick="ReChange()">Re-Change</button>
+     <button class="btn-5" onclick="showhide()">Show & hide</button>
+     <button class="btn-5" onclick="blank()">blank_show</button>
+    <script>
+        function hide()
+        {
+        document.getElementById('i1').style.display="none";
+        document.getElementById('i2').style.display="none";
+       }
+       function show()
+        {
+     document.getElementById('i1').style.display="block";
+      document.getElementById('i2').style.display="block";
+       }
+
+         function Change()
+        {
+          x=  document.getElementById('i1');
+    y=  document.getElementById('i2');
+    y.src="1.JPEG";
+    x.src="2.JPEG";
+       }
+       function ReChange()
+        {
+          x=  document.getElementById('i1');
+    y=  document.getElementById('i2');
+  
+    y.src="2.JPEG";
+    x.src="1.JPEG";
+  
+       }
+     
+    function showhide()
+    {
+        x=document.getElementById('i4');
+        if( x.src.match("1.JPEG") )
+            {
+              x.src="2.JPEG";
+            }
+            else
+            {
+              x.src="1.JPEG";
+            }
+    }
+       function blank()
+       {
+        document.getElementById('i3').style.display="block";
+        
+       }
+    </script>
+</body>
+</html>

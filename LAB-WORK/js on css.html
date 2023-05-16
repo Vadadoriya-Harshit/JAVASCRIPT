@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x
+        {
+            background: gray;
+            color: #fff;
+            font-size: 55px;
+            display: inline-block;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h" onclick="fun()" ondblclick="fun2()">
+        HELLO
+    </h1>
+     <script>
+        const h1tag=document.getElementById('h');
+        
+        function fun()
+        {
+            h1tag.classList.add('x');
+        }
+        function fun2()
+        {
+            h1tag.classList.remove('x');
+        }
+     
+        // h1tag.classList.remove('x');
+     </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>-----   ARRAY---ELEMENTS</h1>
+    <h1 id="h1">
+
+    </h1>
+    <h2 id="len">
+
+    </h2>
+    <h2 id="join">
+
+    </h2>
+    <h2 id="remove">
+
+    </h2>
+    <h2 id="push">
+
+    </h2>
+    <h2 id="shift">
+
+    </h2>
+    <h2 id="unshift">
+
+    </h2>
+    <script>
+        let cars=[];
+        cars.push("odii");
+        cars.push("volvo");
+        cars.push("tata");
+        cars.push("tata");
+        cars.push("mercidece");
+     console.log(cars);
+     var x= document.getElementById('h1');
+     x.innerHTML=cars.length;
+     x.style.background="yellow";
+     x.style.color="blue";
+     x.style.display="inline";
+     x.style.fontSize="57px";
+     var y= document.getElementById('len');
+     y.innerHTML=cars.toString();
+     var z= document.getElementById('join');
+     z.innerHTML=cars.join("  *");
+     var r= document.getElementById('remove');
+     r.innerHTML=cars.pop();
+     r.innerHTML=cars;
+     
+     var addel= document.getElementById('push');
+     addel.innerHTML=cars.push("kiwi");
+     addel.innerHTML=cars;
+     var addel= document.getElementById('shift');
+     addel.innerHTML=cars.shift();
+     addel.innerHTML=cars;
+
+     var addel= document.getElementById('unshift');
+     addel.innerHTML=cars.unshift("Farari");
+     addel.innerHTML=cars;
+    char=["a","b","c","d"];
+    total=cars.concat(char);
+    document.write(total);
+
+     const arr=[[1,2],[3,4],[5,6],[7,8]];
+     const arr2=arr.flat();
+     document.write("<br>"+ arr2);
+
+     arr2.splice("A","B");
+     document.write("<br>"+ arr2);
+    
+    </script>
+    
+
+</body>
+</html>

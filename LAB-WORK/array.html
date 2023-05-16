@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">
+    hiii
+    </h1>
+    <script>
+        // Prompt the user to input four numbers
+let a = parseInt(prompt("Enter the first number: "));
+let b = parseInt(prompt("Enter the second number: "));
+let c = parseInt(prompt("Enter the third number: "));
+let d = parseInt(prompt("Enter the fourth number: "));
+
+// Find the maximum number among the four using ternary operator
+let tie = a > b ? a : b;
+semifinal = c > tie ? c : tie;
+final = d > semifinal ? d : semifinal;
+
+// Display the maximum number
+   
+x= document.getElementById('h').innerHTML=final;
+
+ document.getElementById('h').style.background="blue";
+ document.getElementById('h').style.display="inline";
+ document.getElementById('h').style.color="white";
+ document.getElementById('h').style.fontSize="123px";
+
+
+    </script>
+</body>
+</html>

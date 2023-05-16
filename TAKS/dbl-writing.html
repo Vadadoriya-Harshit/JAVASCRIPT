@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            display: grid;
+            margin: 124px; 
+            grid-template-columns: 1fr 1fr;
+        }
+        .parts{
+            border: 1px solid black;
+        }
+      
+       textarea{
+        font-size: 23px;
+        font-weight: bolder;
+        font-family: sans-serif;
+        border: none;
+        outline: none;
+       }
+       h1{
+         transform: translate(233px,97px);
+         display: inline-block;
+       }
+    </style>
+</head>
+<body>
+    <h1>Type hear&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Auto Type Here</h1>
+    <div class="form">
+<div class="parts">
+
+    <textarea name="" id="i1" cols="30" rows="10" onkeyup="get()"></textarea>
+   
+</div>
+<div class="parts">
+    <textarea name="" id="i2" cols="30" rows="10" onkeyup="get()" readonly></textarea>
+
+</div>
+    </div>
+   
+    <script>
+      
+    function get()
+    {
+      var x= document.getElementById('i1').value;
+        document.getElementById('i2').value=x;
+    }
+   
+    </script>
+</body>
+</html>

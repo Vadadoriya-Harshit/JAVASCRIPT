@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .form{
+            width: 600px;
+            height: auto;
+            font-weight: bold;
+            border: 1px solid black;
+            margin: 153px auto;
+        }
+        button{
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        input[type="date"],input[type="text"]{
+            margin: 23px auto;
+            display: block;
+            width: 250px;
+            height: 44px;   
+           font-size: 22px;
+        }
+        input[type="text"]{
+            margin: 23px;
+        }
+        p{
+            text-indent: 133px;
+            font-family: sans-serif;
+            color: rgb(89, 83, 83);
+            font-size: 22px;
+        }
+        button{
+            height: 44px;
+            font-size: 22px;
+            cursor: pointer;
+            margin-left: 173px;
+        }
+        .b2{
+            height: 44px;
+            font-size: 22px;
+            width: 123px;
+            margin-left: 12px;
+            cursor: pointer;
+            
+        }
+        .read{
+            width: auto;
+            height: 150px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+     <h1> Age Calculator</h1>
+     <p>Candidate -birthdate</p>
+     <input type="date" id="d1">
+     <p>Current Date</p>
+     <input type="date" id="d2">
+     <button onclick="age()" class="b1">Calculate</button>
+     <button class="b2" onclick="reset()">Reset</button>
+    <div class="read">
+   <div class="days">
+    <p>Days</p>
+    <input type="text" name="" id="days" readonly>
+   </div>
+   <div class="years">
+    <p>Years</p>
+    <input type="text" name="" id="years" readonly>
+   </div>
+    </div>
+    </div>
+    <script>
+        function age()
+        {
+            var per1 = document.getElementById('d1').value;
+            var per2 = document.getElementById('d2').value;
+            var date1 = new Date(per1);
+            var date2 = new Date(per2);
+            var diff_cells = date2.getTime() - date1.getTime();
+            var diff_days = Math.round(diff_cells / (1000 * 60 * 60 * 24));
+            var years=Math.round(diff_days/365);
+             document.getElementById('days').value=diff_days;
+             document.getElementById('years').value=years;
+        }
+          function reset()
+          {
+            var reset1="";
+           
+            var per1 = document.getElementById('d1').value=reset1;
+            var per2 = document.getElementById('d2').value=reset1;
+            document.getElementById('days').value=reset1;
+             document.getElementById('years').value=reset1;
+          }
+    </script>
+</body>
+</html>

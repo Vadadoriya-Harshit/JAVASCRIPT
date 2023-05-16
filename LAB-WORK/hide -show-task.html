@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        user-select: none;
+      }
+        #p{
+            display: block;
+            width: 400px;
+            border: 1px solid black;
+            font-size: 22px;
+
+        }
+        button{
+            width: 200px;
+            height: 30px;
+            font-size: 22px;
+            margin-top: -200px;
+            border-radius: 23px;
+            cursor: pointer;
+            border: none;
+        }
+        .div{
+            height: 250px;
+            width: 200px;
+            border: 1px sol;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+    <p id="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt incidunt, soluta delectus quae reprehenderit aliquid quis nulla modi ipsum dicta quasi rerum maxime earum placeat sit corporis mollitia debitis voluptatem!log
+    </p>
+    </div>
+    <button id="btn" onclick="hi('show','hide')">
+      Hide
+    </button>
+    <script>
+       
+       function hi(s='show',h='hide')
+       {
+    
+        var p =document.getElementById('p');
+        var b =document.getElementById('btn');
+          if(p.style.display=='block')
+          {
+            p.style.display='none';
+            b.innerHTML=s;
+
+          }    
+          else{
+            p.style.display='block';
+            b.innerHTML=h;
+          }    
+      
+       }
+        
+        
+    </script>
+</body>
+</html>
