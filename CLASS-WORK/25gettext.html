@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="inp" onkeypress="getval()"> -->
+
+    <input type="text" id="inp" onkeyup="getval()">
+    <textarea name="" id="txt" cols="30" rows="10"></textarea>
+
+    <button ondblclick="getval()">BTN</button>
+    
+
+    <script>
+        i = document.getElementById('inp');
+        t =document.getElementById('txt');
+       
+
+        // i.value ="khdfdkj";
+       function getval()
+       {
+        t.innerHTML =  i.value
+       }
+    </script>
+</body>
+</html>
+
+
+
+
+

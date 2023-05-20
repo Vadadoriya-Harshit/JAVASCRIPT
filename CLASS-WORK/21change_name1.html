@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="t">Karan</h1>
+        <button onclick="changeMe()">Change Me</button>
+
+        <button onclick="changeAgain()">Change Again</button>
+
+        <button onclick="KeepChanging()">Keep Changing</button>
+
+        <script>
+            h1 = document.getElementById('t');
+
+            document.write(h1.innerHTML)
+            function changeMe()
+            {
+            h1.innerHTML = "Om";
+
+            }
+
+            function changeAgain()
+            {
+            h1.innerHTML = "Karan";
+
+            }
+
+            function KeepChanging()
+            {
+                if( h1.innerHTML == "Karan")
+                {
+                    h1.innerHTML = "Om";
+                }
+                else 
+                {
+                    h1.innerHTML = "Karan";
+                }
+                
+            }
+        </script>
+</body>
+</html>

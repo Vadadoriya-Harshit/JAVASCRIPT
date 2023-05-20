@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            display: block;
+            width: 400px;
+            height: auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p id="p">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci id nesciunt numquam! Maiores optio magnam alias rerum nam esse illum, molestiae sequi, voluptate quisquam deserunt eaque! Quos illo minus fuga. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, nobis? Deserunt, harum. Cumque voluptas necessitatibus, laboriosam officia ipsum voluptatibus recusandae aliquam aspernatur sunt inventore ratione similique molestiae ea possimus. Vero.
+    </p>
+    <button id="btn"> 
+        Click
+    </button>
+    <script>
+      document.getElementById('btn').addEventListener("click", function() {
+      var p= document.getElementById('p');
+        if(p.style.visibility=="hidden")
+        {
+            p.style.visibility="visible";
+        }
+        else{
+            p.style.visibility="hidden";
+        }
+     
+      });
+    </script>
+</body>
+</html>

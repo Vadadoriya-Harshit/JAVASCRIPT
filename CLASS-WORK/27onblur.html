@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="d1" onblur="getText()">test</div>
+    <input type="text" id="inp" onblur="getText1()" value="input">
+
+    <span id="res"></span>
+    <script>
+        div_tag = document.getElementById('d1');
+        input_tag = document.getElementById('inp');
+        span_tag = document.getElementById('res');
+
+        
+        function getText()
+        {
+            span_tag.innerHTML =  div_tag.innerHTML;
+        }
+
+        function getText1()
+        {
+            span_tag.innerHTML =  input_tag.value;
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
