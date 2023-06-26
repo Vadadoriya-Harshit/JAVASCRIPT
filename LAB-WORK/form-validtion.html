@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            width: 500px;
+            height: auto;
+            font-family: sans-serif;
+            margin: 123px auto;
+            border: 1px solid black;
+        }
+        input{
+            width: 300px;
+            display: block;
+            height: 44px;
+            margin: auto;
+            outline: none;
+            font-size: 22px;
+            border: none;
+             border-bottom: 1px solid black;
+        }
+        label{
+            font-size: 22px;
+            display: inline-block;
+            text-align: center;
+            transform: translate(93px,12px);
+        }
+        input[type="submit"]{
+            margin-left: 133px;
+            margin-right: 22px;
+        }
+        input[type="submit"],input[type="reset"]{
+            width: auto;
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 3px;
+            font-size: 22px;
+            cursor: pointer;
+            /* margin-left: 13px; */
+            margin-top: 33px;
+        }
+           b{
+            text-align: center;
+            display: block;
+            color: red;
+           }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form action="">
+            <label for="username">username</label>
+            <input type="text" name="username" id="u">
+            <!-- <br> -->
+            <b id="b"></b>
+            <!-- <br> -->
+            <label for="username">Password</label>
+            <input type="text" name="password" id="p">
+            <b id="pb"></b>
+            <label for="username"> Confirm Password</label>
+            <input type="text" name="confirmpassword" id="cp">
+    
+            <b id="cpb"></b>
+            <input type="submit" name="" id="s" onclick="return validate()">
+            <input type="reset" name="" id="">
+  </form>
+    </div>
+    <script>
+        var myexp = /^[a-zA-z=Z]{3,5}/;
+
+            function validate()
+            {
+                var user=document.getElementById('u');
+                var uerr=document.getElementById('b');
+                var pass=document.getElementById('p');
+                var cpass=document.getElementById('cp');
+                var pb=document.getElementById('pb');
+                var cpb=document.getElementById('cpb');
+                if(user.value =="")
+            {
+                uerr.innerHTML =" name??";
+                uerr.style.color ="red";
+            }
+
+            else if(!myexp.test(user.value))
+            {
+                uerr.innerHTML =" min 3 and max 5 letter??";
+            }
+
+            else 
+            {
+                uerr.innerHTML ="";
+            }
+            if(pass.value=="")
+            {
+                pb.innerHTML ="*Password is required..!";
+                pb.style.color ="red";   
+                return false;
+            }
+            else 
+            {
+                pb.innerHTML ="";
+            }
+            if(pass.value!=cpass.value)
+            {
+                cpb.innerHTML ="Password do not match !";
+                cpb.style.color="red";
+                return false;
+            }
+               
+
+            }
+    </script>
+</body>
+</html>

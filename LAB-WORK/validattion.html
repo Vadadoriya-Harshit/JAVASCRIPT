@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name :<input type="text" name="" id="n" onblur="gettags(n,s1)">
+    <span id="s1"></span><br><br>
+   Email : <input type="email=" name="" id="em" onblur="gettags(em,s2)">
+   <span id="s2"></span><br><br>
+    Password :<input type="tel" name="" id="te" onblur="gettags(te,ste)">
+    <span id="ste"> </span><br><br>
+    <script>
+        function gettags(a,b)
+        {
+        console.log(a,b);
+        console.log(a.value);
+        console.log(b);
+        console.log(b.innerHTML);
+
+        if(a.value=="")
+        {
+            b.innerHTML="Field Is Require";
+            b.style.color="red";
+        }
+        else{
+            b.innerHTML="";
+        }
+        }
+    </script>
+</body>
+</html>
