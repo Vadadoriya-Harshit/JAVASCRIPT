@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="i1" value="" onkeyup="test()">
+    <h1 id="h1">
+
+    </h1>
+    <p id="p">
+
+    </p>
+    <script>
+        function test()
+        {
+            var x= document.getElementById('i1').value;
+            var er=document.getElementById('p');
+            try {
+                if(isNaN(x))
+                {
+                    throw 'Please enter Text Only';
+                }
+                else
+                {
+                    throw '';
+            var x= document.getElementById('i1').value="";
+
+                }
+            } catch (error) {
+                er.innerHTML=error;
+                er.style.color="red";
+            }
+           
+          
+        }
+       
+    </script>
+</body>
+</html>
