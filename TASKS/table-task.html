@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            text-align: center;
+            border-collapse:collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Maths</th>
+        </tr>
+    <!-- </table> -->
+    <script>
+        arr=[
+          { name: "Jignesh", phy: 34, chem: 65, math: 70 },
+                    { name: "dev", phy: 54, chem: 55, math: 50 },
+                    { name: "raviraj", phy: 44, chem: 25, math: 55 },
+                    { name: "karan", phy: 74, chem: 65, math: 65 },
+                    { name: "sagar", phy: 84, chem: 45, math: 76 },
+                    { name: "sagar", phy: 84, chem: 45, math: 76 },
+                    { name: "sagar", phy: 84, chem: 45, math: 76 },
+                    { name: "sagar", phy: 84, chem: 45, math: 76 },
+                    { name: "sagar", phy: 84, chem: 45, math: 76 },
+    ];
+       for(i=0;i<arr.length;i++)
+       {
+        document.write("<tr>");
+        document.write("<td>"+arr[i].name+"</td>");
+        document.write("<td>"+arr[i].phy+"</td>");
+        document.write("<td>"+arr[i].chem+"</td>");
+        document.write("<td>"+arr[i].math+"</t>");
+        document.write("</tr>");
+       }
+    </script>
+</body>
+</html>
