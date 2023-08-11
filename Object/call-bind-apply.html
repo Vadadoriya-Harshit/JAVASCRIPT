@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Example function
+function greet(name) {
+  console.log(`Hello, ${name}! I'm ${this.title}.`);
+}
+
+// Object 1
+const person1 = {
+  title: 'Mr.',
+};
+
+// Object 2
+const person2 = {
+  title: 'Mrs.',
+};
+
+// Using the call method
+greet.call(person1, 'John'); 
+greet.call(person2, 'Jane'); 
+
+// Using the apply method
+greet.apply(person1, ['Michael']); 
+greet.apply(person2, ['Emily']);   
+// Using the bind method
+const greetPerson1 = greet.bind(person1);
+const greetPerson2 = greet.bind(person2);
+
+greetPerson1('David'); 
+greetPerson2('Sophia'); 
+    </script>
+</body>
+</html>

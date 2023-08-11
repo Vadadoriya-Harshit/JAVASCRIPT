@@ -87,7 +87,7 @@
             var date2 = new Date(per2);
             var diff_cells = date2.getTime() - date1.getTime();
             var diff_days = Math.round(diff_cells / (1000 * 60 * 60 * 24));
-            var years=Math.round(diff_days/365);
+            var years=diff_days/365;
              document.getElementById('days').value=diff_days;
              document.getElementById('years').value=years;
         }
